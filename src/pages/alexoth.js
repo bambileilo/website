@@ -6,8 +6,7 @@ export default function Alexoth() {
     window.WebFontConfig = {
       google: {
         families: ['Snippet', 'Tagesschrift'],
-      },
-      // active() {
+      }, // active() {
       //   init();
       // },
     };
@@ -22,17 +21,12 @@ export default function Alexoth() {
     })();
 
     const app = new PIXI.Application({
-      eventMode: 'passive',
-      eventFeatures: {
-        move: true,
-        globalMove: true,
-        click: true,
-        wheel: true
+      eventMode: 'passive', eventFeatures: {
+        move: true, globalMove: true, click: true, wheel: true
       },
     })
     await app.init({
-      width: 480,
-      height: 640
+      width: 480, height: 640
     })
     document.getElementById("view").appendChild(app.canvas)
 
@@ -55,18 +49,12 @@ export default function Alexoth() {
     grass.position.set(0, 540)
 
     let countText = new PIXI.Text('0', {
-      fontFamily: 'Tagesschrift',
-      fontSize: 64,
-      fill: 0xffffff,
-      align: 'center'
+      fontFamily: 'Tagesschrift', fontSize: 64, fill: 0xffffff, align: 'center'
     })
     countText.x = 20
 
     let xText = new PIXI.Text('x', {
-      fontFamily: 'Tagesschrift',
-      fontSize: 32,
-      fill: 0xffffff,
-      align: 'center'
+      fontFamily: 'Tagesschrift', fontSize: 32, fill: 0xffffff, align: 'center'
     })
     xText.x = 80
     xText.y = 30
@@ -79,19 +67,13 @@ export default function Alexoth() {
     szlugCountIconSprite.height = 100
 
     let equalText = new PIXI.Text('=', {
-      fontFamily: 'Tagesschrift',
-      fontSize: 54,
-      fill: 0xffffff,
-      align: 'center'
+      fontFamily: 'Tagesschrift', fontSize: 54, fill: 0xffffff, align: 'center'
     })
     equalText.x = 195
     equalText.y = 14
 
     let valueText = new PIXI.Text('0zł', {
-      fontFamily: 'Tagesschrift',
-      fontSize: 52,
-      fill: 0xffffff,
-      align: 'center'
+      fontFamily: 'Tagesschrift', fontSize: 52, fill: 0xffffff, align: 'center'
     })
     valueText.x = 250
     valueText.y = 10
@@ -112,10 +94,7 @@ export default function Alexoth() {
     alexSprite.x = 40
 
     let floatingText = new PIXI.Text('Alex', {
-      fontFamily: 'Tagesschrift',
-      fontSize: 32,
-      fill: 0xffffff,
-      align: 'center'
+      fontFamily: 'Tagesschrift', fontSize: 32, fill: 0xffffff, align: 'center'
     })
     floatingText.anchor.set(0.5)
     floatingText.x = alexSprite.x + alexSprite.width / 2
@@ -151,10 +130,7 @@ export default function Alexoth() {
     startScreen.addChild(startBackground);
 
     const startButton = new PIXI.Text('-----\n🚬 START 🚬\n-----', {
-      fontFamily: 'Tagesschrift',
-      fontSize: 32,
-      fill: 0xffffff,
-      align: 'center',
+      fontFamily: 'Tagesschrift', fontSize: 32, fill: 0xffffff, align: 'center',
     });
     startButton.anchor.set(0.5);
     startButton.x = (app.screen.width / 2) - 1;
@@ -163,11 +139,8 @@ export default function Alexoth() {
     startButton.buttonMode = true;
     startScreen.addChild(startButton);
 
-    let byText = new PIXI.Text('@dzikoysk', {
-      fontFamily: 'Tagesschrift',
-      fontSize: 20,
-      fill: 0x494949,
-      align: 'center'
+    let byText = new PIXI.Text('@bambileilo', {
+      fontFamily: 'Tagesschrift', fontSize: 20, fill: 0x494949, align: 'center'
     })
     byText.x = (app.screen.width / 2) - 55
     byText.y = app.screen.height - 60
@@ -263,12 +236,7 @@ export default function Alexoth() {
         const alexBounds = getReducedBounds(alexSprite, 0.5)
         const szlugBounds = getReducedBounds(szlugSprite, 0.9)
 
-        if (
-          alexBounds.x < szlugBounds.x + szlugBounds.width &&
-          alexBounds.x + alexBounds.width > szlugBounds.x &&
-          alexBounds.y < szlugBounds.y + szlugBounds.height &&
-          alexBounds.y + alexBounds.height > szlugBounds.y
-        ) {
+        if (alexBounds.x < szlugBounds.x + szlugBounds.width && alexBounds.x + alexBounds.width > szlugBounds.x && alexBounds.y < szlugBounds.y + szlugBounds.height && alexBounds.y + alexBounds.height > szlugBounds.y) {
           alexSprite.tint = 0xFF0000;
 
           // Reset color after 200ms
@@ -341,22 +309,20 @@ export default function Alexoth() {
     }
   }, []);
 
-  return (
-    <>
-      <Head>
-        <title>Alexoth</title>
-        <meta name="viewport" content="width=500,height=660"/>
-        <link rel="icon" type="image/png" href="/alexoth/favico.ico"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet"/>
-        <script src="https://pixijs.download/release/pixi.min.js"></script>
-      </Head>
-      <div
-        className={`m-0 p-0 overflow-hidden w-screen h-screen min-w-[500px] min-h-[660px] bg-black flex items-center justify-center`}
-      >
-        <div id="view" className={`w-[480px] h-[640px] m-auto`}></div>
-      </div>
-    </>
-  )
+  return (<>
+    <Head>
+      <title>Alexoth</title>
+      <meta name="viewport" content="width=500,height=660"/>
+      <link rel="icon" type="image/png" href="/alexoth/favico.ico"/>
+      <link rel="preconnect" href="https://fonts.googleapis.com"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+      <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet"/>
+      <script src="https://pixijs.download/release/pixi.min.js"></script>
+    </Head>
+    <div
+      className={`m-0 p-0 overflow-hidden w-screen h-screen min-w-[500px] min-h-[660px] bg-black flex items-center justify-center`}
+    >
+      <div id="view" className={`w-[480px] h-[640px] m-auto`}></div>
+    </div>
+  </>)
 }
