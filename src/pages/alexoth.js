@@ -14,7 +14,7 @@ export default function Alexoth() {
     <>
       <Head>
         <title>Alexoth</title>
-        <meta name="viewport" content="width=500,height=660"/>
+        <meta name="viewport" content="width=500"/>
         <link rel="icon" type="image/png" href="/alexoth/favico.ico"/>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
