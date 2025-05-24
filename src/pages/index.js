@@ -128,7 +128,7 @@ export default function Home() {
               <p><span className={`font-bold`}>I/O: </span><span className={`text-[#d7d2cc]`}>Piano</span></p>
               <p><span className={`font-bold`}>Memory: </span><span className={`text-[#d7d2cc]`}>Korean</span></p>
               <p></p>
-              <div className={`flex pt-4 pl-8`}>
+              <div className={`flex pt-4 pl-6`}>
                 <div className={'w-9 h-7 bg-[#ce9178]'}></div>
                 <div className={'w-9 h-7 bg-[#6a7786]'}></div>
                 <div className={'w-9 h-7 bg-[#698996]'}></div>
