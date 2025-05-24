@@ -17,7 +17,15 @@ export default function Home() {
 
     switch (currentCommand.toLowerCase()) {
       case "help":
-        newLogs = [...newLogs, { type: 'output', value: "Available commands: help, clear, contact, projects, open <project>" }]
+        newLogs = [
+          ...newLogs,
+          { type: 'output', value: "Available commands:" },
+          { type: 'output', value: "  help - Show this help message" },
+          { type: 'output', value: "  clear - Clear the terminal" },
+          { type: 'output', value: "  contact - Show contact information" },
+          { type: 'output', value: "  projects - List public projects" },
+          { type: 'output', value: "  open <project> - Open a project" },
+        ]
         break;
       case "clear":
         newLogs = [];
@@ -28,8 +36,9 @@ export default function Home() {
       case "projects":
         newLogs = [
           ...newLogs,
-          { type: 'output', value: "website - dsł ta stronka" },
-          { type: 'output', value: "alexoth - modlimy się żeby @sasha_topg rzuciła palenie" },
+          { type: 'output', value: "Public projects:" },
+          { type: 'output', value: "  website - dsł ta stronka" },
+          { type: 'output', value: "  alexoth - modlimy się żeby @sasha_topg rzuciła palenie" },
         ]
         break;
       case "open website":
@@ -90,7 +99,7 @@ export default function Home() {
         onClick={() => inputRef.current.focus()}
       >
         <main className={`p-3 sm:p-6 font-roboto-mono text-sm`}>
-          <div className={`flex flex-col sm:flex-row`}>
+          <div className={`flex flex-col sm:flex-row w-screen sm:w-fit px-4 sm:px-0`}>
             <div className={`flex justify-center items-end bg-[#688893] w-full sm:w-96 h-96  rounded`}>
               <img
                 alt={"avatar"}
@@ -110,8 +119,8 @@ export default function Home() {
               <p><span className={`font-bold`}>Shell: </span><span className={`text-[#d7d2cc]`}>Polish/English</span>
               </p>
               <p><span className={`font-bold`}>Theme: </span><span className={`text-[#d7d2cc]`}>Nerd</span></p>
-              <p><span className={`font-bold`}>CPU: </span><span
-                className={`text-[#d7d2cc]`}>Software Development</span></p>
+              <p><span className={`font-bold`}>Icons: </span><span className={`text-[#d7d2cc]`}>Hidden</span></p>
+              <p><span className={`font-bold`}>CPU: </span><span className={`text-[#d7d2cc]`}>Software Development</span></p>
               <p><span className={`font-bold`}>GPU: </span><span className={`text-[#d7d2cc]`}>Digital art</span></p>
               <p><span className={`font-bold`}>I/O: </span><span className={`text-[#d7d2cc]`}>Piano</span></p>
               <p><span className={`font-bold`}>Memory: </span><span className={`text-[#d7d2cc]`}>Korean</span></p>
@@ -134,10 +143,10 @@ export default function Home() {
               <div key={`log-${index}`} className={`flex flex-wrap`}>
                 {log.type === 'input' && <span className={`text-[#6a7786]`}>bambileilo </span>}
                 {log.type === 'input' && <span className={`text-[#d5af98] pl-3 pr-2`}> ~/projects &gt; </span>}
-                <span className={`text-[#d7d2cc]`}>{log.value}</span>
+                <span className={`text-[#d7d2cc]`}>{log.value.replace(' ', '\u00A0')}</span>
               </div>
             ))}
-            <div className={`flex`}>
+            <div className={`flex px-4 sm:px-0`}>
               <span className={`text-[#6a7786]`}>bambileilo </span>
               <span className={`text-[#d5af98] pl-3 pr-2`}> ~/projects &gt; </span>
               <input

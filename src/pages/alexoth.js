@@ -320,7 +320,7 @@ export default function Alexoth() {
       <script src="https://pixijs.download/release/pixi.min.js"></script>
     </Head>
     <div
-      className={`m-0 p-0 overflow-hidden w-screen h-screen min-w-[500px] min-h-[660px] bg-black flex items-center justify-center`}
+      className={`m-0 p-0 overflow-hidden w-full h-full min-w-[500px] min-h-[660px] bg-black flex items-center justify-center`}
     >
       <div id="view" className={`w-[480px] h-[640px] m-auto`}></div>
     </div>
