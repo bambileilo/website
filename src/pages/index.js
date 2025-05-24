@@ -3,7 +3,7 @@ import {useEffect, useRef, useState} from "react"
 
 export default function Home() {
   const [logs, setLogs] = useState([])
-  const [command, setCommand] = useState("help")
+  const [command, setCommand] = useState("")
   const viewEndRef = useRef(null)
   const inputRef = useRef(null)
 
@@ -86,7 +86,7 @@ export default function Home() {
 
   useEffect(() => {
     if (inputRef.current) {
-      updateInput(command)
+      setCommand("help")
     }
   }, [inputRef])
 
