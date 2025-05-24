@@ -19,12 +19,12 @@ export default function Home() {
       case "help":
         newLogs = [
           ...newLogs,
-          { type: 'output', value: "Available commands:" },
-          { type: 'output', value: "  help - Show this help message" },
-          { type: 'output', value: "  clear - Clear the terminal" },
-          { type: 'output', value: "  contact - Show contact information" },
-          { type: 'output', value: "  projects - List public projects" },
-          { type: 'output', value: "  open <project> - Open a project" },
+          { type: 'output', value: "Dostępne komendy:" },
+          { type: 'output', value: " • clear - Wyczyść terminal" },
+          { type: 'output', value: " • contact - Inforamcje kontaktowe" },
+          { type: 'output', value: " • projects - Lista publicznych projektów" },
+          { type: 'output', value: " • open [projekt] - Otwórz konkrenty projekt" },
+          { type: 'output', value: " • help - Lista dostępnych komend" },
         ]
         break;
       case "clear":
@@ -36,17 +36,20 @@ export default function Home() {
       case "projects":
         newLogs = [
           ...newLogs,
-          { type: 'output', value: "Public projects:" },
-          { type: 'output', value: "  website - dsł ta stronka" },
-          { type: 'output', value: "  alexoth - modlimy się żeby @sasha_topg rzuciła palenie" },
+          { type: 'output', value: "Publiczne projekty:" },
+          { type: 'output', value: "  • website" },
+          { type: 'output', value: "      dsł ta stronka" },
+          { type: 'output', value: "  • alexoth" },
+          { type: 'output', value: "      modlimy się żeby @sasha_topg" },
+          { type: 'output', value: "      rzuciła palenie" },
         ]
         break;
       case "open website":
-        newLogs = [...newLogs, { type: 'output', value: "Opening website..." }]
+        newLogs = [...newLogs, { type: 'output', value: "Otwieranie stronki w nowej karcie..." }]
         window.open("https://bambileilo.com", "_blank")
         break;
       case "open alexoth":
-        newLogs = [...newLogs, { type: 'output', value: "Opening Alexoth..." }]
+        newLogs = [...newLogs, { type: 'output', value: "Otwieranie Alexoth..." }]
         window.open(location.protocol + '//' + location.host + location.pathname + "/alexoth", "_blank")
         break;
       case "":
@@ -54,9 +57,9 @@ export default function Home() {
         break;
       default:
         if (currentCommand.startsWith("open")) {
-          newLogs = [...newLogs, { type: 'output', value: `Unknown project: ` + currentCommand.slice(4) }]
+          newLogs = [...newLogs, { type: 'output', value: `Nieznany projekt: ` + currentCommand.slice(4) }]
         } else {
-          newLogs = [...newLogs, {type: 'output', value: `Command not found: ${currentCommand}`}]
+          newLogs = [...newLogs, {type: 'output', value: `Nieznana komenda: ${currentCommand}`}]
         }
     }
 
@@ -143,7 +146,7 @@ export default function Home() {
               <div key={`log-${index}`} className={`flex flex-wrap`}>
                 {log.type === 'input' && <span className={`text-[#6a7786]`}>bambileilo </span>}
                 {log.type === 'input' && <span className={`text-[#d5af98] pl-3 pr-2`}> ~/projects &gt; </span>}
-                <span className={`text-[#d7d2cc]`}>{log.value.replace(' ', '\u00A0')}</span>
+                <span className={`text-[#d7d2cc] whitespace-pre-wrap`} dangerouslySetInnerHTML={{__html: log.value.replace(' ', '&nbsp;')}}></span>
               </div>
             ))}
             <div className={`flex pt-0.5`}>
