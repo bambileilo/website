@@ -137,7 +137,7 @@ export default function Home() {
             </div>
           </div>
           <div
-            className={`flex flex-col pt-4 pb-2`}
+            className={`flex flex-col pt-4 pb-2 px-4 sm:px-0`}
           >
             {logs.map((log, index) => (
               <div key={`log-${index}`} className={`flex flex-wrap`}>
@@ -146,7 +146,7 @@ export default function Home() {
                 <span className={`text-[#d7d2cc]`}>{log.value.replace(' ', '\u00A0')}</span>
               </div>
             ))}
-            <div className={`flex px-4 sm:px-0`}>
+            <div className={`flex pt-0.5`}>
               <span className={`text-[#6a7786]`}>bambileilo </span>
               <span className={`text-[#d5af98] pl-3 pr-2`}> ~/projects &gt; </span>
               <input
