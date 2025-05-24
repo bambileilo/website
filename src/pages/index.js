@@ -7,6 +7,12 @@ export default function Home() {
   const viewEndRef = useRef(null)
   const inputRef = useRef(null)
 
+  function updateInput(command) {
+    inputRef.current.style.width = `${Math.max(1, command.length * 9)}px`
+    inputRef.current.focus()
+    inputRef.current.setSelectionRange(command.length, command.length)
+  }
+
   function handleCommand(command) {
     setCommand(command)
   }
@@ -74,14 +80,13 @@ export default function Home() {
 
   useEffect(() => {
     if (inputRef.current) {
-      inputRef.current.setSelectionRange(command.length, command.length)
-      inputRef.current.style.width = `${Math.max(1, command.length * 9)}px`
+      updateInput(command)
     }
   }, [command])
 
   useEffect(() => {
     if (inputRef.current) {
-      inputRef.current.focus();
+      updateInput(command)
     }
   }, [inputRef])
 
