@@ -21,15 +21,12 @@ export default function Alexoth() {
         <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet" />
         <script src="https://pixijs.download/release/pixi.min.js"></script>
       </Head>
-      <div
-        className={```
-          m-0 p-0 pt-2 sm:p-0 
-          overflow-hidden 
-          w-full min-h-screen h-full min-w-[500px] 
-          bg-black 
-          flex sm:items-center justify-center
-        ```}
-      >
+      <div className={`
+        m-0 p-0 pt-2 sm:p-0 
+        overflow-hidden w-full min-h-screen h-full min-w-[500px] 
+        bg-black 
+        flex sm:items-center justify-center
+      `}>
         <div id="view" className={`w-[480px] h-[640px] m-auto flex justify-center`}>
           <p className={`font-tagesschrift text-white`}>Loading...</p>
         </div>
