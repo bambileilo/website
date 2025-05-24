@@ -13,7 +13,8 @@ export default {
       },
       fontFamily: {
         "xproto": ["'xproto'"],
-        "roboto-mono": ["Roboto Mono"]
+        "roboto-mono": ["Roboto Mono"],
+        "tagesschrift": ["Tagesschrift"]
       }
     },
   },
