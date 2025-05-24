@@ -85,14 +85,17 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      <div className={`flex w-screen h-screen bg-[#261621] overflow-x-hidden justify-center sm:justify-start`} onClick={() => inputRef.current.focus()}>
+      <div
+        className={`flex w-full min-w-screen min-h-screen h-full bg-[#261621] overflow-x-hidden justify-center sm:justify-start`}
+        onClick={() => inputRef.current.focus()}
+      >
         <main className={`p-3 sm:p-6 font-roboto-mono text-sm`}>
           <div className={`flex flex-col sm:flex-row`}>
-            <div className={`flex justify-center items-end bg-[#688893] h-96 w-96 rounded`}>
+            <div className={`flex justify-center items-end bg-[#688893] w-full sm:w-96 h-96  rounded`}>
               <img
                 alt={"avatar"}
                 src={"/home/avatar.png"}
-                className={`w-72 h-auto hue-rotate-[320deg] `}
+                className={`w-3/5 sm:w-72 h-auto max-w-72 max-h-96 hue-rotate-[320deg] `}
               />
             </div>
             <div className={`text-[#d4b8ac] sm:px-6 pt-6 sm:pt-0`}>
@@ -128,7 +131,7 @@ export default function Home() {
             className={`flex flex-col pt-4 pb-2`}
           >
             {logs.map((log, index) => (
-              <div key={`log-${index}`} className={`flex`}>
+              <div key={`log-${index}`} className={`flex flex-wrap`}>
                 {log.type === 'input' && <span className={`text-[#6a7786]`}>bambileilo </span>}
                 {log.type === 'input' && <span className={`text-[#d5af98] pl-3 pr-2`}> ~/projects &gt; </span>}
                 <span className={`text-[#d7d2cc]`}>{log.value}</span>
