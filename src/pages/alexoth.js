@@ -257,7 +257,7 @@ async function run() {
       floatingText.x = alexSprite.x + alexSprite.width / 2;
       floatingText.y = alexSprite.y - 30;
 
-      const additionalSpeed = szlugCount * 0.1
+      const additionalSpeed = Math.max(szlugCount * 0.1, 0)
       ground1.x -= 4 + additionalSpeed
       ground2.x -= 4 + additionalSpeed
 
