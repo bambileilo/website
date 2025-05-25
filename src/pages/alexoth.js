@@ -308,6 +308,7 @@ async function run() {
         }, 200);
         collisionSound.play();
         szlugHit = true
+        szlugCount--
       }
     })
 
