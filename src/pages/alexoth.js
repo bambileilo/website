@@ -16,9 +16,9 @@ export default function Alexoth() {
         <title>Alexoth</title>
         <meta name="viewport" content="width=500"/>
         <link rel="icon" type="image/png" href="/alexoth/favico.ico"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet"/>
         <script src="https://pixijs.download/release/pixi.min.js"></script>
       </Head>
       <div className={`
@@ -194,7 +194,7 @@ async function run() {
   startButton.buttonMode = true;
   startScreen.addChild(startButton);
 
-  let byText = new PIXI.Text('@dzikoysk', {
+  let byText = new PIXI.Text('@bambileilo', {
     fontFamily: 'Tagesschrift',
     fontSize: 20,
     fill: 0x494949,
