@@ -281,6 +281,8 @@ async function run() {
             if (szlugCount > 9) {
               xText.x = 95
             }
+          } else {
+            szlugCount -= 1
           }
 
           szlugHit = false
@@ -308,7 +310,6 @@ async function run() {
         }, 200);
         collisionSound.play();
         szlugHit = true
-        szlugCount--
       }
     })
 
