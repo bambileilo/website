@@ -120,7 +120,7 @@ export default function Home() {
               <p className={`py-1`}>-------------------------</p>
               <p><span className={`font-bold`}>OS: </span><span className={`text-[#d7d2cc]`}>Male</span></p>
               <p><span className={`font-bold`}>Host: </span><span className={`text-[#d7d2cc]`}>Poland</span></p>
-              <p><span className={`font-bold`}>Port: </span><span className={`text-[#d7d2cc]`}>Warsaw</span></p>
+              <p><span className={`font-bold`}>Port: </span><span className={`text-[#d7d2cc]`}>W*rsaw</span></p>
               <p><span className={`font-bold`}>Uptime: </span><span className={`text-[#d7d2cc]`}>Since '99</span></p>
               <p><span className={`font-bold`}>Resolution: </span><span className={`text-[#d7d2cc]`}>178px</span></p>
               <p><span className={`font-bold`}>Package: </span><span className={`text-[#d7d2cc]`}>69</span></p>
